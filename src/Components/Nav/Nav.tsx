@@ -1,13 +1,9 @@
-import React, { useState } from 'react'
-import { BookOpenIcon, Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/solid'
-import { Link } from 'react-router-dom';
+import { useState } from 'react'
+import { Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/solid'
 import { NavLink } from 'react-router-dom';
 import "./Nav.scss"
-import { UserIcon } from '@heroicons/react/24/outline';
 
-type Props = {}
-
-const Nav = (props: Props) => {
+const Nav = () => {
     let Links = [
         { name: "Home", link: "/" },
         { name: "Carreira", link: "/career" },
@@ -15,9 +11,7 @@ const Nav = (props: Props) => {
         { name: "Contatos", link: "/contact" }
     ];
     const [open, setOpen] = useState<boolean>(false);
-
     const handleClick = () => setOpen(!open);
-    const Close = () => setOpen(false);
 
     return (
         <div className='header'>
@@ -30,7 +24,7 @@ const Nav = (props: Props) => {
                         <h3 className='font-bold text-1xl'>Rodrigo Granada</h3>
                     </div>
                     {/* Menu icon */}
-                    <div onClick={() => setOpen(!open)} className='absolute right-8 top-6 cursor-pointer md:hidden w-7 h-7'>
+                    <div onClick={() => handleClick()} className='absolute right-8 top-6 cursor-pointer md:hidden w-7 h-7'>
                         {
                             open ? <XMarkIcon /> : <Bars3BottomRightIcon />
                         }
@@ -38,11 +32,11 @@ const Nav = (props: Props) => {
                     {/* linke items */}
                     <ul className={`md:flex md:items-center rounded-b-lg md:pb-0 pb-12 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'sm: top-20' : 'top-[-490px]'}`}>
                         {
-                            Links.map((link) => (
-                                <li className='sm: my-0 my-4 md:ml-8 md:my-0 my-7 font-semibold'>
+                            Links.map((link, index) => (
+                                <li key={index} className='xs:my-5 sm:my-4 md:ml-8 md:my-7 font-semibold'>
                                     <NavLink
                                         to={link.link}
-                                        onClick={() => setOpen(!open)}
+                                        onClick={() => handleClick()}
                                         className={({ isActive }) => `text-black hover:text-darkBlue ${isActive && 'text-darkBlue'}`}
                                     >
                                         {link.name}
