@@ -3,14 +3,15 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     screens: {
-      xs: "335px",
-      sm: "480px",
-      md: "768px",
-      lg: "1020px",
-      xl: "1440px",
+      'xs': "335px",
+      'sm': "480px",
+      'md': "768px",
+      'lg': "1020px",
+      'xl': "1440px",
     },
     extend: {
       colors: {
+        navBgColor: `var(--navBgColor)`,
         bgColor: `var(--bgColor)`,
         textColor: `var(--textColor)`,
         lightBlue: "hsl(215.02, 98.39%, 51.18%)",
