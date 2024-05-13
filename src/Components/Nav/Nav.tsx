@@ -30,7 +30,18 @@ const Nav = () => {
                         }
                     </div>
                     {/* linke items */}
-                    <ul className={`md:flex md:items-center rounded-b-lg md:pb-0 pb-12 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'sm: top-20' : 'top-[-490px]'}`}>
+                    <ul className={`
+                        bg-white 
+                        md:bg-navBgColor                    
+                        md:flex 
+                        md:items-center rounded-b-lg 
+                        md:pb-0 pb-12 absolute 
+                        md:static
+                        md:z-auto z-[-1] left-0 w-full 
+                        md:w-auto 
+                        md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'sm: top-20' : 'top-[-490px]'}
+                        `
+                    }>
                         {
                             Links.map((link, index) => (
                                 <li key={index} className='xs:my-5 sm:my-4 md:ml-8 md:my-7 font-semibold'>
