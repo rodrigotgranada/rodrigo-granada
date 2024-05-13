@@ -16,7 +16,7 @@ const Nav = () => {
     return (
         <div className='header'>
             <div className='shadow-md w-full fixed top-0 left-0'>
-                <div className='md:flex items-center justify-between bg-white py-4 md:px-10 px-7 rounded-b-lg'>
+                <div className='md:flex items-center justify-between bg-navBgColor py-4 md:px-10 px-7 rounded-b-lg '>
                     {/* logo section */}
                     <div className=' cursor-pointer items-center gap-1'>
                         {/* <UserIcon className='w-7 h-7 ' /> */}

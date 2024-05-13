@@ -4,7 +4,7 @@ import Nav from '../Nav/Nav'
 import Footer from '../Footer/Footer'
 const App = () => {
   return (
-    <div className="app">
+    <div className="app bg-bgColor text-textColor">
       <Nav />
       <div className='app-body'><Outlet /></div>
       <Footer />
