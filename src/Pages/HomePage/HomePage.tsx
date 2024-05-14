@@ -1,18 +1,16 @@
-import { useContext } from "react";
-import { ThemeContext } from "../../Contexts/ThemeContext";
-import { ThemeContextInterface } from "../../types";
+
+// import Button from "../../Components/Button/Button";
 
 
 const HomePage = () => {
-    const { darkTheme, toggleTheme } = useContext(
-        ThemeContext
-    ) as ThemeContextInterface;
+    // const { darkTheme, toggleTheme } = useContext(
+    //     ThemeContext
+    // ) as ThemeContextInterface;
 
     return (
         <div>
-            <button className="btn btn-primary" onClick={toggleTheme}>
-                Theme {darkTheme ? "dark" : 'light'}
-            </button>
+            Home
+            {/* <Button children={`Teste`} types={'geral'} onClick={() => console.log('cliquei')} /> */}
         </div>
     )
 }
