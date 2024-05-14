@@ -11,7 +11,9 @@ module.exports = {
     },
     extend: {
       colors: {
+        textActive: `var(--textActive)`,
         navBgColor: `var(--navBgColor)`,
+        navBgColorSmall: `var(--navBgColorSmall)`,
         bgColor: `var(--bgColor)`,
         textColor: `var(--textColor)`,
         lightBlue: "hsl(215.02, 98.39%, 51.18%)",

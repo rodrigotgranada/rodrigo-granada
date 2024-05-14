@@ -1,7 +1,9 @@
-import { useState } from 'react'
-import { Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/solid'
+import { useContext, useState } from 'react'
+import { Bars3BottomRightIcon, XMarkIcon, MoonIcon, SunIcon } from '@heroicons/react/24/solid'
 import { NavLink } from 'react-router-dom';
 import "./Nav.scss"
+import { ThemeContext } from '../../Contexts/ThemeContext';
+import { ThemeContextInterface } from '../../types';
 
 const Nav = () => {
     let Links = [
@@ -12,6 +14,10 @@ const Nav = () => {
     ];
     const [open, setOpen] = useState<boolean>(false);
     const handleClick = () => setOpen(!open);
+
+    const { darkTheme, toggleTheme } = useContext(
+        ThemeContext
+    ) as ThemeContextInterface;
 
     return (
         <div className='header'>
@@ -24,14 +30,22 @@ const Nav = () => {
                         <h3 className='font-bold text-1xl'>Rodrigo Granada</h3>
                     </div>
                     {/* Menu icon */}
-                    <div onClick={() => handleClick()} className='absolute right-8 top-6 cursor-pointer md:hidden w-7 h-7'>
-                        {
-                            open ? <XMarkIcon /> : <Bars3BottomRightIcon />
-                        }
+                    <div className='flex items-center gap-2 absolute right-5 top-6'>
+                        <div onClick={() => toggleTheme()} className=' cursor-pointer md:hidden w-6 h-6 transition-all duration-900 ease-in'>
+                            {
+                                !darkTheme ? <MoonIcon /> : <SunIcon />
+                            }
+                        </div>
+                        <div onClick={() => handleClick()} className='cursor-pointer md:hidden w-7 h-7 transition-all duration-500 ease-in'>
+                            {
+                                open ? <XMarkIcon /> : <Bars3BottomRightIcon />
+                            }
+                        </div>
+
                     </div>
                     {/* linke items */}
                     <ul className={`
-                        bg-white 
+                        bg-navBgColorSmall 
                         md:bg-navBgColor                    
                         md:flex 
                         md:items-center rounded-b-lg 
@@ -44,20 +58,20 @@ const Nav = () => {
                     }>
                         {
                             Links.map((link, index) => (
-                                <li key={index} className='xs:my-5 sm:my-4 md:ml-8 md:my-7 font-semibold'>
+                                <li key={index} className='xs:my-5 sm:my-4 md:ml-8 md:my-7 font-semibold text-textColor'>
                                     <NavLink
                                         to={link.link}
                                         onClick={() => handleClick()}
-                                        className={({ isActive }) => `text-black hover:text-darkBlue ${isActive && 'text-darkBlue'}`}
+                                        className={({ isActive }) => `${isActive && 'underline underline-offset-4 text-textActive'} hover:text-darkBlue`}
                                     >
                                         {link.name}
                                     </NavLink>
                                     {/* <a href={link.link} className='text-gray-800 hover:text-blue-400 duration-500'>{link.name}</a> */}
                                 </li>))
                         }
-                        <button className='btn bg-blue-600 text-white md:ml-8 font-semibold px-3 py-1 rounded duration-500 md:static'>Currículo</button>
+                        <button className='btn bg-blue-600 hover:bg-white hover:text-darkBlue text-white md:ml-8 font-semibold px-3 py-1 rounded duration-500 md:static'>Currículo</button>
                     </ul>
-                    {/* button */}
+
                 </div>
             </div>
         </div>
