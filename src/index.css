@@ -11,6 +11,7 @@
     --navBgColor: rgba(206, 207, 212, 0.034);
     --navBorderColor: rgba(206, 207, 212, 0.034);
     --navBgColorSmall: rgb(180 180 181);
+    --cardBgColor: rgba(185, 185, 185, 1);
 }
 
 .theme-dark {
@@ -20,4 +21,5 @@
     --navBgColor: rgba(2, 6, 23, 0.034);
     --navBorderColor: rgba(214, 233, 41, 0.034);
     --navBgColorSmall: rgb(8, 16, 59);
+    --cardBgColor: rgba(7, 11, 52, 1);
 }
