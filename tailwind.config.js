@@ -15,6 +15,7 @@ module.exports = {
         navBgColor: `var(--navBgColor)`,
         navBorderColor: `var(--navBorderColor)`,
         navBgColorSmall: `var(--navBgColorSmall)`,
+        cardBgColor: `var(--cardBgColor)`,
         bgColor: `var(--bgColor)`,
         textColor: `var(--textColor)`,
         lightBlue: "hsl(215.02, 98.39%, 51.18%)",

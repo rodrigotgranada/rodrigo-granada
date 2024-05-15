@@ -12,7 +12,7 @@ const HomePage = () => {
                     <div className="text-6xl">Me chamo <span className="text-textActive text-500">Rodrigo</span>.</div>
                     <div className="text-xl">Desenvolvedor Front-end.</div>
                 </div>
-                <div className=" rounded ">
+                <div className="rounded ">
                     <img src={String(selfie)} alt="Eu" className="rounded-lg m-auto w-[9rem] md:w-[11rem]" />
                 </div>
             </div>
