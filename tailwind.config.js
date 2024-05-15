@@ -13,6 +13,7 @@ module.exports = {
       colors: {
         textActive: `var(--textActive)`,
         navBgColor: `var(--navBgColor)`,
+        navBorderColor: `var(--navBorderColor)`,
         navBgColorSmall: `var(--navBgColorSmall)`,
         bgColor: `var(--bgColor)`,
         textColor: `var(--textColor)`,
