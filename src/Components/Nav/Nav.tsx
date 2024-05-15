@@ -23,10 +23,10 @@ const Nav = () => {
     return (
         // <div className='header'>
         // <header className='shadow-md w-full fixed top-0 left-0 h-28'>
-        <header className='sticky top-0 flex items-center justify-between p-4 rounded-lg shadow-md shadow-green-500'>
+        <header className='sticky top-0 flex items-center justify-between bg-bgColor p-2 md:p-4 rounded-lg shadow-md shadow-textActive'>
             {/* <div className='md:flex items-center justify-between bg-navBgColor py-4 md:px-10 px-7 rounded-b-lg '> */}
             {/* logo section */}
-            <div className=' cursor-pointer items-center gap-1'>
+            <div className='cursor-pointer items-center gap-1'>
                 {/* <UserIcon className='w-7 h-7 ' /> */}
                 <h2 className='font-bold text-2xl'>Portifólio</h2>
                 <h3 className='font-bold text-1xl'>Rodrigo Granada</h3>
@@ -42,7 +42,7 @@ const Nav = () => {
             </div>
 
             {/* linke items */}
-            <ul className={`bg-navBgColorSmall md:bg-navBgColor md:flex md:items-center rounded-b-lg md:pb-0 pb-12 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'sm: top-20' : 'top-[-490px]'}`}>
+            <ul className={`bg-navBgColorSmall md:bg-navBgColor md:flex md:items-center rounded-b-lg md:pb-0 pb-12 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'sm: top-[4.5rem]' : 'top-[-490px]'}`}>
                 {
                     Links.map((link, index) => (
                         <Button key={index.toString()} children={
