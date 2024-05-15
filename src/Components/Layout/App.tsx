@@ -6,7 +6,7 @@ const App = () => {
   return (
     <div className="app bg-bgColor text-textColor">
       <Nav />
-      <main className='app-body'><Outlet /></main>
+      <main className='app-body gap-y-8'><Outlet /></main>
       <Footer />
     </div>
   )
