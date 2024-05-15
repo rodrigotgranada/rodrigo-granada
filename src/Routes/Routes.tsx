@@ -5,13 +5,14 @@ import ContactPage from "../Pages/ContactPage/ContactPage";
 import SkillsPage from "../Pages/SkillsPage/SkillsPage";
 import CareerPage from "../Pages/CareerPage/CareerPage";
 import App from "../Components/Layout/App";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 export const router = createBrowserRouter([
     {
         path: "/",
         element: <App />,
         children: [
-            { path: "*", element: <div>Página não encontrada</div> },
+            { path: "*", element: <ErrorPage /> },
             { path: "/", element: <HomePage /> },
             // { path: "home", element: <HomePage /> },
             { path: "contact", element: <ContactPage /> },
