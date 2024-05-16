@@ -1,21 +1,39 @@
 import React from 'react'
 import Card from '../Card/Card';
+
+type Types = 'social' | 'skill'
+
 export interface Skill {
     name: string;
     img?: string;
+    link?: string;
 }
 
 interface Props {
+    ListClasses: Types;
+    CardClasses: string;
     skills: Skill[];
 }
 
+function getListType(type: string): string {
+    let finalClass = ""
+    if (type === 'social') {
+        finalClass = "flex flex-col md:flex-row justify-evenly gap-10"
+    } else {
+        finalClass = "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-10 text-center"
+    }
+    return finalClass
+}
+
 const CardList: React.FC<Props> = ({
+    ListClasses,
+    CardClasses,
     skills
 }: Props): JSX.Element => {
     return (
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-10 text-center">
+        <div className={getListType(ListClasses)}>
             {skills.map((skill, index) => {
-                return <Card key={index} classes="py-4 px-2 w-full mx-auto flex flex-col cursor-pointer justify-between gap-2 rounded-lg bg-cardBgColor ring-4 ring-textActive ring-400 hover:ring-textActive hover:ring-6s00 transition ease-in-out hover:-translate-y-1 hover:scale-110" skill={skill} />
+                return <Card key={index} classes={CardClasses} skill={skill} />
             })}
         </div>
     )

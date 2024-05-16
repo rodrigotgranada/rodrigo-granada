@@ -16,6 +16,10 @@ import sass from './../Assets/imgs/hardskills/sass.svg'
 import git from './../Assets/imgs/hardskills/git.svg'
 import github from './../Assets/imgs/hardskills/github.svg'
 
+import gmail from './../Assets/imgs/contact/gmail.svg'
+import linkedin from './../Assets/imgs/contact/linkedin.svg'
+import github2 from './../Assets/imgs/contact/github.svg'
+
 export const softSkills = [
     { name: 'Trabalho em equipe' },
     { name: 'Colaborativo' },
@@ -47,4 +51,10 @@ export const hardSkills = [
     { name: 'Sass', img: String(sass) },
     { name: 'Git', img: String(git) },
     { name: 'GitHub', img: String(github) },
+]
+
+export const contacts = [
+    { name: 'rtgranada@gmail.com', img: String(gmail), link: "mailto:rtgranada@gmail.com" },
+    { name: 'https://www.linkedin.com/in/rtgranada/', img: String(linkedin), link: "https://www.linkedin.com/in/rtgranada/" },
+    { name: 'https://github.com/rodrigotgranada', img: String(github2), link: "https://github.com/rodrigotgranada" },
 ]

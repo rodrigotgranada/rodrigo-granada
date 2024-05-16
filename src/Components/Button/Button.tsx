@@ -4,7 +4,6 @@ type Types = 'geral' | 'nav'
 
 interface Props {
     types?: Types;
-
     children?: React.ReactNode;
     onClick?: () => void;
     classname?: string;
