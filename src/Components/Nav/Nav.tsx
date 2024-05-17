@@ -23,7 +23,7 @@ const Nav = () => {
     return (
         // <div className='header'>
         // <header className='shadow-md w-full fixed top-0 left-0 h-28'>
-        <header className='sticky top-0 flex items-center justify-between bg-bgColor p-2 md:p-4 rounded-lg shadow-md shadow-textActive'>
+        <header className='sticky top-0 flex items-center justify-between bg-bgColor p-2 md:p-4 rounded-lg shadow-md shadow-textActive z-40'>
             {/* <div className='md:flex items-center justify-between bg-navBgColor py-4 md:px-10 px-7 rounded-b-lg '> */}
             {/* logo section */}
             <div className='cursor-pointer items-center gap-1'>

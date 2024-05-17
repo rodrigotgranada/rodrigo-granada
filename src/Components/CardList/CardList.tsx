@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from '../Card/Card';
+import CardFlip from '../CardFlip/CardFlip';
 
 type Types = 'social' | 'skill'
 
@@ -33,7 +34,15 @@ const CardList: React.FC<Props> = ({
     return (
         <div className={getListType(ListClasses)}>
             {skills.map((skill, index) => {
-                return <Card key={index} classes={CardClasses} skill={skill} />
+                if (skill.img) {
+                    if (ListClasses === "social") {
+                        return <Card key={index} classes={CardClasses} skill={skill} />
+                    } else {
+                        return <CardFlip key={index} skill={skill} />
+                    }
+                } else {
+                    return <Card key={index} classes={CardClasses} skill={skill} />
+                }
             })}
         </div>
     )
