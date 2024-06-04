@@ -5,6 +5,7 @@ import "./Nav.scss"
 import { ThemeContext } from '../../Contexts/ThemeContext';
 import { ThemeContextInterface } from '../../types';
 import Button from '../Button/Button';
+import Curriculo from './../../Assets/Curriculo/RodrigoGranada.pdf'
 
 const Nav = () => {
     let Links = [
@@ -19,6 +20,10 @@ const Nav = () => {
     const { darkTheme, toggleTheme } = useContext(
         ThemeContext
     ) as ThemeContextInterface;
+
+    const handleClickPdf = () => {
+        return window.open(Curriculo, "_blank");
+    }
 
     return (
         // <div className='header'>
@@ -56,7 +61,7 @@ const Nav = () => {
                         } types={'nav'} />
                     ))
                 }
-                <Button children={`Currículo`} types={'geral'} onClick={() => console.log('cliquei')} />
+                <Button children={`Currículo`} types={'geral'} onClick={() => handleClickPdf()} />
                 <div className='flex items-center md:relative md:top-0 md:right-0 ml-4 xs:absolute xs:top-6 xs:right-5'>
                     <div onClick={() => toggleTheme()} className=' cursor-pointer w-6 h-6 transition-all duration-900 ease-in'>
                         {

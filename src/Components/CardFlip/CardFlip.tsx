@@ -12,7 +12,6 @@ interface Props {
 }
 
 const CardFlip: React.FC<Props> = ({
-    classes,
     skill,
 }: Props): JSX.Element => {
     return (
