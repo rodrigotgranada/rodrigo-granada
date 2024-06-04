@@ -6,6 +6,7 @@ import reactimg from './../Assets/imgs/hardskills/react.svg'
 import vite from './../Assets/imgs/hardskills/vite.svg'
 import reactRouter from './../Assets/imgs/hardskills/react-router.svg'
 import next from './../Assets/imgs/hardskills/nextjs.svg'
+import vue from './../Assets/imgs/hardskills/vue.svg'
 import jest from './../Assets/imgs/hardskills/jest.svg'
 import redux from './../Assets/imgs/hardskills/redux.svg'
 import reactQuery from './../Assets/imgs/hardskills/react-query.svg'
@@ -42,6 +43,7 @@ export const hardSkills = [
     { name: 'Vite', img: String(vite) },
     { name: 'React Router', img: String(reactRouter) },
     { name: 'NextJs', img: String(next) },
+    { name: 'Vue', img: String(vue) },
     { name: 'Jest', img: String(jest) },
     { name: 'Redux', img: String(redux) },
     { name: 'React Query', img: String(reactQuery) },
